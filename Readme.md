@@ -162,3 +162,5 @@ Seeded data is visible through API and UI
 
 Frontend successfully consumes hosted backend API
 
+Author
+Helal Uddin
