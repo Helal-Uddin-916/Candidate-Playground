@@ -1,89 +1,55 @@
-# Candidate Playground
+Candidate Playground
+Overview
 
-## Overview
+Candidate Playground is a minimal full-stack application that stores personal candidate profile data in a database and exposes it via a REST API along with a basic frontend UI.
 
-Candidate Playground is a minimal full-stack application that stores my personal candidate profile in a database and exposes it via a REST API along with a basic frontend UI. The application allows querying profile information such as skills and projects and demonstrates backend API design, database modeling, and frontend integration.
+The application allows querying profile information such as skills and projects and demonstrates backend API design, database modeling, and frontend integration.
 
 This project was developed as part of an assignment to showcase full-stack development fundamentals including API creation, querying, data persistence, and deployment readiness.
 
----
+Architecture
+Frontend
 
-## Architecture
+React.js
 
-### Frontend
-- React
-- Minimal UI for viewing profile, skills, and projects
-- Supports searching and filtering
-- Communicates with backend via REST APIs
+Minimal UI for viewing profile, skills, and projects
 
-### Backend
-- Node.js
-- Express.js
-- RESTful API design
-- Middleware for validation, logging, rate limiting, and error handling
+Supports searching and filtering
 
-### Database
-- MongoDB
-- Mongoose ODM
-- Seeded with real candidate data
+Communicates with backend via REST APIs
 
-### Project Structure
+Backend
 
+Node.js
+
+Express.js
+
+RESTful API design
+
+Middleware for validation, logging (Winston), rate limiting, authentication, and error handling
+
+Seeded with real candidate data
+
+Deployed backend API: https://candidate-playground-1-vrw5.onrender.com/
+
+Health check endpoint: https://candidate-playground-1-vrw5.onrender.com/health
+
+Database
+
+MongoDB
+
+Mongoose ODM
+
+Seeded with real candidate data
+
+Project Structure
 Candidate-Playground/
-├── client/ # React frontend
-├── server/ # Node.js backend
+├── client/   # React frontend
+├── server/   # Node.js backend
 └── README.md
 
-
----
-
-## API Endpoints
-
-### Health Check
-
-GET /health
-
-
-Returns HTTP `200` if the service is running.
-
-Live:
-https://candidate-playground-1-vrw5.onrender.com/health
-
-
----
-
-### Profile APIs
-
-POST /profile
-GET /profile
-PUT /profile
-
-
----
-
-### Query APIs
-
-#### Get projects by skill
-GET /projects?skill=javascript
-
-
-#### Get top skills
-GET /skills/top
-
-
-#### Search across profile data
-GET /search?q=react
-
-
----
-
-## Database Schema
-
-The application uses MongoDB with the following schema.
-
-### Profile Collection
-
-```json
+Database Schema
+Profile Collection
 {
   "name": "String",
   "email": "String",
@@ -104,47 +70,55 @@ The application uses MongoDB with the following schema.
   }
 }
 
-The database is seeded with real candidate data using a seed script.
-
 Local Setup
 Prerequisites
+
 Node.js
 
 npm
 
 MongoDB (local or cloud)
 
-Backend Setup
+Backend
 cd server
 npm install
 npm start
-Frontend Setup
+
+Frontend
 cd client
 npm install
 npm start
+
 Deployment
-The application is deployed and publicly accessible.
 
-Live URLs
-Frontend:
+The application is deployed and publicly accessible:
 
-https://candidate-playground.vercel.app/
-Backend API:
+Frontend: https://candidate-playground.vercel.app/
 
-https://candidate-playground-1-vrw5.onrender.com/
-Health Check:
+Backend API: https://candidate-playground-1-vrw5.onrender.com/
 
-https://candidate-playground-1-vrw5.onrender.com/health
+Health Check: https://candidate-playground-1-vrw5.onrender.com/health
+
 The frontend communicates with the hosted backend API with CORS enabled.
 
 Sample API Calls
+
 Health Check
+
 curl https://candidate-playground-1-vrw5.onrender.com/health
+
+
 Get Projects by Skill
+
 curl https://candidate-playground-1-vrw5.onrender.com/projects?skill=react
+
+
 Search Profile Data
+
 curl https://candidate-playground-1-vrw5.onrender.com/search?q=javascript
+
 Optional Features Implemented
+
 Basic authentication middleware
 
 Rate limiting
@@ -156,6 +130,7 @@ Request validation
 Logging using Winston
 
 Acceptance Criteria
+
 GET /health returns HTTP 200
 
 Profile CRUD APIs are functional
@@ -165,4 +140,3 @@ Query endpoints return filtered and correct results
 Seeded data is visible through API and UI
 
 Frontend successfully consumes hosted backend API
-
