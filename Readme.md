@@ -139,7 +139,18 @@ Get Projects by Skill
 curl https://candidate-playground-1-vrw5.onrender.com/projects?skill=react
 Search Profile Data
 curl https://candidate-playground-1-vrw5.onrender.com/search?q=javascript
+Resume
+Resume link:
+https://your-resume-link
 
+Known Limitations
+No authentication required for read operations
+
+No pagination for large datasets
+
+Minimal UI styling
+
+No automated tests included
 
 Optional Features Implemented
 Basic authentication middleware
