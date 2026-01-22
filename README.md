@@ -103,6 +103,7 @@ The application uses MongoDB with the following schema.
     "portfolio": "String"
   }
 }
+
 The database is seeded with real candidate data using a seed script.
 
 Local Setup
