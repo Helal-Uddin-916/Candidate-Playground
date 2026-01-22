@@ -102,21 +102,21 @@ The application uses MongoDB with the following schema:
 The database is seeded with real candidate data using a seed script.
 
 Local Setup
-    Prerequisites
-        Node.js
-        npm
-        MongoDB (local or cloud)
+Prerequisites
+Node.js
+
+npm
+
+MongoDB (local or cloud)
 
 Backend Setup
 cd server
 npm install
 npm start
-
 Frontend Setup
 cd client
 npm install
 npm start
-
 Deployment
 The application is deployed and publicly accessible.
 
@@ -143,17 +143,25 @@ curl https://candidate-playground-1-vrw5.onrender.com/search?q=javascript
 
 Optional Features Implemented
 Basic authentication middleware
+
 Rate limiting
+
 Centralized error handling
+
 Request validation
+
 Logging using Winston
 
 Acceptance Criteria
 GET /health returns HTTP 200
+
 Profile CRUD APIs are functional
+
 Query endpoints return filtered and correct results
+
 Seeded data is visible through API and UI
+
 Frontend successfully consumes hosted backend API
 
 Author
-Md Helal Uddin
+Helal Uddin
