@@ -41,6 +41,7 @@ Candidate-Playground/
 ### Health Check
 GET /health
 
+
 Returns HTTP `200` if the service is running.
 
 Live:
@@ -75,7 +76,7 @@ GET /search?q=react
 
 ## Database Schema
 
-The application uses MongoDB with the following schema:
+The application uses MongoDB with the following schema.
 
 ### Profile Collection
 
@@ -122,14 +123,14 @@ The application is deployed and publicly accessible.
 
 Live URLs
 Frontend:
+
 https://candidate-playground.vercel.app/
-
 Backend API:
+
 https://candidate-playground-1-vrw5.onrender.com/
-
 Health Check:
-https://candidate-playground-1-vrw5.onrender.com/health
 
+https://candidate-playground-1-vrw5.onrender.com/health
 The frontend communicates with the hosted backend API with CORS enabled.
 
 Sample API Calls
@@ -139,19 +140,6 @@ Get Projects by Skill
 curl https://candidate-playground-1-vrw5.onrender.com/projects?skill=react
 Search Profile Data
 curl https://candidate-playground-1-vrw5.onrender.com/search?q=javascript
-Resume
-Resume link:
-https://your-resume-link
-
-Known Limitations
-No authentication required for read operations
-
-No pagination for large datasets
-
-Minimal UI styling
-
-No automated tests included
-
 Optional Features Implemented
 Basic authentication middleware
 
@@ -174,5 +162,3 @@ Seeded data is visible through API and UI
 
 Frontend successfully consumes hosted backend API
 
-Author
-Helal Uddin
