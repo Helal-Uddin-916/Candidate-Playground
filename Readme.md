@@ -28,6 +28,7 @@ This project was developed as part of an assignment to showcase full-stack devel
 - Seeded with real candidate data
 
 ### Project Structure
+
 Candidate-Playground/
 ├── client/ # React frontend
 ├── server/ # Node.js backend
@@ -39,6 +40,7 @@ Candidate-Playground/
 ## API Endpoints
 
 ### Health Check
+
 GET /health
 
 
@@ -51,6 +53,7 @@ https://candidate-playground-1-vrw5.onrender.com/health
 ---
 
 ### Profile APIs
+
 POST /profile
 GET /profile
 PUT /profile
